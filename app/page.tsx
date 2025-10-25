@@ -27,19 +27,19 @@ export default function HomePage() {
   const genericInfo = {
     companyName: "Stoke HVAC",
     phone: "5091234567",
-    cityRegion: "[City/Region]",
-    establishedYear: "[Year]",
-    rating: "[X.X]",
-    reviewCount: "[X,XXX]+",
+    cityRegion: "Spokane",
+    establishedYear: "1998",
+    rating: "4.9",
+    reviewCount: "2,500+",
   };
 
   return (
     <div className="min-h-screen flex flex-col font-sans bg-white text-gray-900">
       {/* --- TOP UTILITY BAR --- */}
-      <div className="bg-slate-900 text-slate-300 text-xs md:text-sm py-2 px-4">
+      <div className="bg-gray-900 text-gray-300 text-xs md:text-sm py-2 px-4">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-center sm:text-left space-y-2 sm:space-y-0">
           <div className="flex items-center space-x-2">
-            <Clock className="w-4 h-4 text-red-500" />
+            <Clock className="w-4 h-4 text-orange-500" />
             <span className="font-medium text-white">
               After Hour Emergency Service Available
             </span>
@@ -66,11 +66,11 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 py-4 md:py-6 flex items-center justify-between">
           {/* Logo Area */}
           <div className="flex items-center space-x-2 flex-shrink-0">
-            <div className="w-10 h-10 bg-blue-700 rounded-lg flex items-center justify-center">
+            <div className="w-10 h-10 bg-orange-600 rounded-lg flex items-center justify-center">
               <Wrench className="text-white w-6 h-6" />
             </div>
             <div>
-              <h1 className="text-xl md:text-2xl font-bold leading-none text-blue-900">
+              <h1 className="text-xl md:text-2xl font-bold leading-none text-gray-900">
                 {genericInfo.companyName}
               </h1>
               <p className="text-xs text-gray-500 uppercase tracking-wider hidden md:block">
@@ -81,13 +81,13 @@ export default function HomePage() {
 
           {/* Desktop Main Nav */}
           <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8 font-medium text-gray-700">
-            <a href="#" className="flex items-center space-x-1 text-red-600 hover:text-red-700">
+            <a href="#" className="flex items-center space-x-1 text-orange-600 hover:text-orange-700">
               <Percent className="w-4 h-4" />
               <span>Discounts</span>
             </a>
-            <a href="#" className="hover:text-blue-700 transition-colors">HVAC</a>
-            <a href="#" className="hover:text-blue-700 transition-colors">Plumbing</a>
-            <a href="#" className="hover:text-blue-700 transition-colors">Electrical</a>
+            <a href="#" className="hover:text-orange-600 transition-colors">HVAC</a>
+            <a href="#" className="hover:text-orange-600 transition-colors">Plumbing</a>
+            <a href="#" className="hover:text-orange-600 transition-colors">Electrical</a>
           </nav>
 
           {/* CTA Area */}
@@ -95,11 +95,11 @@ export default function HomePage() {
             <div className="flex flex-col items-end">
               <span className="text-xs text-gray-500 font-medium">24/7 Service</span>
               <a href={`tel:${genericInfo.phone}`} className="flex items-center space-x-2 text-xl font-bold text-gray-900">
-                <Phone className="w-5 h-5 text-blue-700 fill-current" />
+                <Phone className="w-5 h-5 text-orange-600 fill-current" />
                 <span>{genericInfo.phone}</span>
               </a>
             </div>
-            <button className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-md transition-colors shadow-sm flex items-center space-x-2">
+            <button className="bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-6 rounded-md transition-colors shadow-sm flex items-center space-x-2">
               <Calendar className="w-5 h-5" />
               <span>Schedule Online</span>
             </button>
@@ -118,19 +118,19 @@ export default function HomePage() {
         {isMobileMenuOpen && (
           <div className="lg:hidden bg-white border-t border-gray-100 px-4 pt-4 pb-6 space-y-4 shadow-xl absolute w-full left-0">
             <div className="grid grid-cols-2 gap-2">
-              <a href="#" className="flex flex-col items-center justify-center p-4 bg-red-50 rounded-lg text-red-700 font-medium">
+              <a href="#" className="flex flex-col items-center justify-center p-4 bg-orange-50 rounded-lg text-orange-700 font-medium">
                 <Percent className="w-6 h-6 mb-2" />
                 Discounts
               </a>
-              <a href="#" className="flex flex-col items-center justify-center p-4 bg-blue-50 rounded-lg text-blue-700 font-medium">
+              <a href="#" className="flex flex-col items-center justify-center p-4 bg-orange-50 rounded-lg text-orange-700 font-medium">
                 <Wrench className="w-6 h-6 mb-2" />
                 HVAC
               </a>
-              <a href="#" className="flex flex-col items-center justify-center p-4 bg-blue-50 rounded-lg text-blue-700 font-medium">
+              <a href="#" className="flex flex-col items-center justify-center p-4 bg-orange-50 rounded-lg text-orange-700 font-medium">
                 <Droplet className="w-6 h-6 mb-2" />
                 Plumbing
               </a>
-              <a href="#" className="flex flex-col items-center justify-center p-4 bg-blue-50 rounded-lg text-blue-700 font-medium">
+              <a href="#" className="flex flex-col items-center justify-center p-4 bg-orange-50 rounded-lg text-orange-700 font-medium">
                 <Zap className="w-6 h-6 mb-2" />
                 Electrical
               </a>
@@ -141,7 +141,7 @@ export default function HomePage() {
               <a href="#" className="block text-lg font-medium text-gray-800">Service Club Membership</a>
               <a href="#" className="block text-lg font-medium text-gray-800">About Us</a>
             </div>
-            <button className="w-full bg-red-600 text-white font-bold py-4 rounded-md flex items-center justify-center space-x-2">
+            <button className="w-full bg-orange-600 text-white font-bold py-4 rounded-md flex items-center justify-center space-x-2">
               <Phone className="w-5 h-5" />
               <span>Call {genericInfo.phone}</span>
             </button>
@@ -150,8 +150,8 @@ export default function HomePage() {
       </header>
 
       {/* --- TRUST BANNER --- */}
-      <div className="bg-blue-50 border-b border-blue-100 py-3 px-4">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm md:text-base text-blue-900">
+      <div className="bg-orange-50 border-b border-orange-100 py-3 px-4">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm md:text-base text-gray-900">
           <div className="flex items-center space-x-1">
             <div className="flex">
               {[1, 2, 3, 4, 5].map((star) => (
@@ -160,7 +160,7 @@ export default function HomePage() {
             </div>
             <span className="font-bold">{genericInfo.rating}/5</span>
           </div>
-          <span className="hidden sm:inline text-blue-300">|</span>
+          <span className="hidden sm:inline text-gray-300">|</span>
           <p>Based on <strong>{genericInfo.reviewCount}</strong> customer reviews</p>
         </div>
       </div>
@@ -178,7 +178,7 @@ export default function HomePage() {
             priority
             className="brightness-50" // Darken the image slightly for better text contrast
           />
-          <div className="absolute inset-0 bg-blue-900 opacity-30"></div> {/* Blue overlay */}
+          <div className="absolute inset-0 bg-gray-900 opacity-30"></div> {/* Dark overlay */}
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 py-12 lg:py-24 grid lg:grid-cols-2 gap-12 lg:gap-8 items-center text-white"> {/* Added text-white for contrast */}
@@ -191,7 +191,7 @@ export default function HomePage() {
 
             <div className="space-y-4">
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
-                Servicing <span className="text-red-400">{genericInfo.cityRegion}</span> Residents Since {genericInfo.establishedYear}
+                Servicing <span className="text-orange-400">{genericInfo.cityRegion}</span> Residents Since {genericInfo.establishedYear}
               </h2>
               <p className="text-xl max-w-xl mx-auto lg:mx-0">
                 The area's most trusted HVAC, Plumbing & Electrical specialists. We get it done right the first time.
@@ -199,12 +199,12 @@ export default function HomePage() {
             </div>
 
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
-              <button className="w-full sm:w-auto bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-md transition-transform active:scale-95 flex items-center justify-center space-x-2 shadow-lg shadow-red-900/20">
+              <button className="w-full sm:w-auto bg-orange-600 hover:bg-orange-700 text-white font-bold py-4 px-8 rounded-md transition-transform active:scale-95 flex items-center justify-center space-x-2 shadow-lg shadow-orange-900/20">
                 <span>See Our Discounts</span>
                 <ChevronRight className="w-5 h-5" />
               </button>
               <div className="flex items-center space-x-2 font-medium">
-                <Award className="w-6 h-6 text-red-400" />
+                <Award className="w-6 h-6 text-orange-400" />
                 <span>100% Satisfaction Guarantee</span>
               </div>
             </div>
@@ -235,9 +235,9 @@ export default function HomePage() {
                       key={service.id}
                       type="button"
                       onClick={() => setSelectedService(service.id)}
-                      className={`flex flex-col items-center justify-center p-3 rounded-xl border-2 transition-all ${selectedService === service.id ? 'border-blue-600 bg-blue-50 text-blue-800' : 'border-gray-200 hover:border-blue-300 hover:bg-gray-50 text-gray-600'}`}
+                      className={`flex flex-col items-center justify-center p-3 rounded-xl border-2 transition-all ${selectedService === service.id ? 'border-orange-600 bg-orange-50 text-orange-800' : 'border-gray-200 hover:border-orange-300 hover:bg-gray-50 text-gray-600'}`}
                     >
-                      <service.icon className={`w-6 h-6 mb-1 ${selectedService === service.id ? 'text-blue-600' : 'text-gray-400'}`} />
+                      <service.icon className={`w-6 h-6 mb-1 ${selectedService === service.id ? 'text-orange-600' : 'text-gray-400'}`} />
                       <span className="text-sm font-medium leading-tight">{service.label}</span>
                     </button>
                   ))}
@@ -248,17 +248,17 @@ export default function HomePage() {
               <div className="space-y-4 pt-2">
                 <div>
                   <label htmlFor="name" className="sr-only">Full Name</label>
-                  <input type="text" id="name" placeholder="Full Name" className="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-shadow" />
+                  <input type="text" id="name" placeholder="Full Name" className="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition-shadow text-gray-900 placeholder-gray-500" />
                 </div>
                 <div>
                   <label htmlFor="phone" className="sr-only">Phone Number</label>
-                  <input type="tel" id="phone" placeholder="Phone Number" className="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-shadow" />
+                  <input type="tel" id="phone" placeholder="Phone Number" className="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition-shadow text-gray-900 placeholder-gray-500" />
                 </div>
-                <button type="submit" className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-md transition-colors shadow-md text-lg">
+                <button type="submit" className="w-full bg-orange-600 hover:bg-orange-700 text-white font-bold py-4 px-8 rounded-md transition-colors shadow-md text-lg">
                   Submit Request
                 </button>
                 <p className="text-xs text-center text-gray-500">
-                  For emergencies, please call us directly at <a href={`tel:${genericInfo.phone}`} className="underline font-semibold hover:text-red-600">{genericInfo.phone}</a>
+                  For emergencies, please call us directly at <a href={`tel:${genericInfo.phone}`} className="underline font-semibold hover:text-orange-600">{genericInfo.phone}</a>
                 </p>
               </div>
             </form>
@@ -277,31 +277,31 @@ export default function HomePage() {
             <p className="mb-4">{genericInfo.cityRegion}'s trusted home service experts since {genericInfo.establishedYear}.</p>
             <div className="flex items-center space-x-2">
               <MapPin className="w-4 h-4 text-gray-400" />
-              <span>Serving [Region] & Surrounding Areas</span>
+              <span>Serving {genericInfo.cityRegion} & Surrounding Areas</span>
             </div>
           </div>
           <div>
             <h4 className="font-bold text-gray-900 mb-4">Services</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:text-blue-700">Air Conditioning</a></li>
-              <li><a href="#" className="hover:text-blue-700">Heating / Furnace</a></li>
-              <li><a href="#" className="hover:text-blue-700">Plumbing Repair</a></li>
-              <li><a href="#" className="hover:text-blue-700">Electrical Panels</a></li>
+              <li><a href="#" className="hover:text-orange-600">Air Conditioning</a></li>
+              <li><a href="#" className="hover:text-orange-600">Heating / Furnace</a></li>
+              <li><a href="#" className="hover:text-orange-600">Plumbing Repair</a></li>
+              <li><a href="#" className="hover:text-orange-600">Electrical Panels</a></li>
             </ul>
           </div>
            <div>
             <h4 className="font-bold text-gray-900 mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:text-blue-700">Special Offers</a></li>
-              <li><a href="#" className="hover:text-blue-700">Financing Options</a></li>
-              <li><a href="#" className="hover:text-blue-700">Maintenance Plan</a></li>
-              <li><a href="#" className="hover:text-blue-700">Careers</a></li>
+              <li><a href="#" className="hover:text-orange-600">Special Offers</a></li>
+              <li><a href="#" className="hover:text-orange-600">Financing Options</a></li>
+              <li><a href="#" className="hover:text-orange-600">Maintenance Plan</a></li>
+              <li><a href="#" className="hover:text-orange-600">Careers</a></li>
             </ul>
           </div>
           <div>
             <h4 className="font-bold text-gray-900 mb-4">Contact</h4>
-            <p className="text-2xl font-bold text-blue-900 mb-2">{genericInfo.phone}</p>
-            <button className="text-red-600 font-semibold hover:underline">Schedule Service Now &rarr;</button>
+            <p className="text-2xl font-bold text-gray-900 mb-2">{genericInfo.phone}</p>
+            <button className="text-orange-600 font-semibold hover:underline">Schedule Service Now &rarr;</button>
           </div>
         </div>
       </footer>
